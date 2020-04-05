@@ -8,6 +8,12 @@ Init a new project
 bsb -init my-new-project -theme basic-reason
 ```
 
+## Types
+
+### Int and Float
+
+To force a operation to float, for example `+`, you can pass a `.` to the operator like `+.`.
+
 ## Operators
 
 ### Pipe Operator

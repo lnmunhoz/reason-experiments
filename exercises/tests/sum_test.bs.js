@@ -5,8 +5,20 @@ var Jest = require("@glennsl/bs-jest/src/jest.js");
 var Functions$Exercises = require("../src/Functions.bs.js");
 
 Jest.describe("Expect", (function (param) {
-        return Jest.test("should sum 1 + 2", (function (param) {
-                      return Jest.Expect.toBe(3, Jest.Expect.expect(Functions$Exercises.sum(1, 2)));
+        Jest.test("should sum 1 + 2", (function (param) {
+                return Jest.Expect.toBe(3, Jest.Expect.expect(Functions$Exercises.sum(1, 2)));
+              }));
+        Jest.test("should convert 10 meters to 10000 millimiters", (function (param) {
+                return Jest.Expect.toBe(10000.0, Jest.Expect.expect(Functions$Exercises.meterToMillimeter(10.0)));
+              }));
+        Jest.test("should convert 5.5 meters to 5500 millimiters", (function (param) {
+                return Jest.Expect.toBe(5500.0, Jest.Expect.expect(Functions$Exercises.meterToMillimeter(5.5)));
+              }));
+        Jest.test("should return how many seconds has in a day", (function (param) {
+                return Jest.Expect.toBe(86400, Jest.Expect.expect(Functions$Exercises.DaysToSeconds.convert(1, 0, 0, 0)));
+              }));
+        return Jest.test("should return how many seconds has in a 1:05:42:55", (function (param) {
+                      return Jest.Expect.toBe(106975, Jest.Expect.expect(Functions$Exercises.DaysToSeconds.convert(1, 5, 42, 55)));
                     }));
       }));
 
