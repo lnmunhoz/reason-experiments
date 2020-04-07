@@ -74,6 +74,6 @@ describe("Exercise 9", () => {
 
 describe("Exercise 10", () => {
   test("convert 89.6 fahrenheit to celsius", () => {
-    expect(Functions.calcSmokerLife(1.0, 1.0)) |> toBe(2.534722222)
+    expect(Functions.calcSmokerLife(1.0, 1.0)) |> toBe(2.53)
   })
 })

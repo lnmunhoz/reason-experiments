@@ -63,6 +63,12 @@ function calcCarRentalPrice(km, days) {
   return days * 60.0 + km * 0.15;
 }
 
+function calcSmokerLife(cigarsPerDay, yearsSmoking) {
+  var totalCigars = cigarsPerDay * yearsSmoking * 365.0;
+  var minutesLost = totalCigars * 10.0;
+  return Number((minutesLost / 60.0 / 24.0).toFixed(2));
+}
+
 exports.sum = sum;
 exports.meterToMillimeter = meterToMillimeter;
 exports.DaysToSeconds = DaysToSeconds;
@@ -72,4 +78,5 @@ exports.getTripTime = getTripTime;
 exports.celsiusToFahreinheit = celsiusToFahreinheit;
 exports.fahreinheitToCelsius = fahreinheitToCelsius;
 exports.calcCarRentalPrice = calcCarRentalPrice;
+exports.calcSmokerLife = calcSmokerLife;
 /* No side effect */

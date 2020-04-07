@@ -72,7 +72,7 @@ Jest.describe("Exercise 9", (function (param) {
 
 Jest.describe("Exercise 10", (function (param) {
         return Jest.test("convert 89.6 fahrenheit to celsius", (function (param) {
-                      return Jest.Expect.toBe(2.534722222, Jest.Expect.expect(Functions$Exercises.calcSmokerLife(1.0, 1.0)));
+                      return Jest.Expect.toBe(2.53, Jest.Expect.expect(Functions$Exercises.calcSmokerLife(1.0, 1.0)));
                     }));
       }));
 

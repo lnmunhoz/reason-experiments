@@ -51,10 +51,10 @@ let fahreinheitToCelsius = (f) => (f -. 32.0) *. 5.0 /. 9.0
 let calcCarRentalPrice = (km, days) => days *. 60.0 +. km *. 0.15
 
 // Assuming that one cigar reduces 10 minute of your life
-// let calcSmokerLife = (cigarsPerDay, yearsSmoking) => {
+let calcSmokerLife = (cigarsPerDay, yearsSmoking) => {
 
-//   let totalCigars = cigarsPerDay *. yearsSmoking *. 365.0
-//   let minutesLost = totalCigars *. 10.0
-//   minutesLost /. 60.0 /. 24.0
+  let totalCigars = cigarsPerDay *. yearsSmoking *. 365.0
+  let minutesLost = totalCigars *. 10.0
 
-// }
+  Js.Float.toFixedWithPrecision(minutesLost /. 60.0 /. 24.0, ~digits=2) |> Js.Float.fromString
+}
