@@ -37,7 +37,39 @@ var DaysToSeconds = {
   convert: convert
 };
 
+function getSalaryRaise(salary, increase) {
+  var salaryRaise = salary * (increase / 100.0);
+  return salary + salaryRaise;
+}
+
+function getDiscount(price, discount) {
+  var discountValue = price * (discount / 100.0);
+  return price - discountValue;
+}
+
+function getTripTime(distance, avgSpeed) {
+  return distance / 1000.0 / avgSpeed;
+}
+
+function celsiusToFahreinheit(c) {
+  return 9.0 * c / 5.0 + 32.0;
+}
+
+function fahreinheitToCelsius(f) {
+  return (f - 32.0) * 5.0 / 9.0;
+}
+
+function calcCarRentalPrice(km, days) {
+  return days * 60.0 + km * 0.15;
+}
+
 exports.sum = sum;
 exports.meterToMillimeter = meterToMillimeter;
 exports.DaysToSeconds = DaysToSeconds;
+exports.getSalaryRaise = getSalaryRaise;
+exports.getDiscount = getDiscount;
+exports.getTripTime = getTripTime;
+exports.celsiusToFahreinheit = celsiusToFahreinheit;
+exports.fahreinheitToCelsius = fahreinheitToCelsius;
+exports.calcCarRentalPrice = calcCarRentalPrice;
 /* No side effect */
